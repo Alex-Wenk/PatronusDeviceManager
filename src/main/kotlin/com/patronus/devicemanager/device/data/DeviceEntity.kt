@@ -1,7 +1,7 @@
-package com.patronus.devicemanager.device
+package com.patronus.devicemanager.device.data
 
 import com.patronus.devicemanager.data.BaseEntity
-import com.patronus.devicemanager.user.UserEntity
+import com.patronus.devicemanager.user.data.UserEntity
 import jakarta.persistence.*
 import org.hibernate.annotations.Cascade
 import org.hibernate.annotations.CascadeType

@@ -1,8 +1,8 @@
-package com.patronus.devicemanager.user
+package com.patronus.devicemanager.user.data
 
-import com.patronus.devicemanager.address.AddressEntity
+import com.patronus.devicemanager.address.data.AddressEntity
 import com.patronus.devicemanager.data.BaseEntity
-import com.patronus.devicemanager.device.DeviceEntity
+import com.patronus.devicemanager.device.data.DeviceEntity
 import jakarta.persistence.*
 import org.hibernate.annotations.Cascade
 import org.hibernate.annotations.CascadeType
@@ -27,5 +27,13 @@ class UserEntity(
     @Cascade(CascadeType.ALL)
     var devices: List<DeviceEntity>? = null
 
+
+    companion object {
+        const val FIRST_NAME = "firstName"
+        const val LAST_NAME = "lastName"
+        const val ADDRESS = "address"
+        const val BIRTHDAY = "birthday"
+        const val DEVICES = "devices"
+    }
 
 }

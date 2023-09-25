@@ -1,4 +1,4 @@
-package com.patronus.devicemanager.address
+package com.patronus.devicemanager.address.data
 
 import com.patronus.devicemanager.data.BaseEntity
 import jakarta.persistence.Entity

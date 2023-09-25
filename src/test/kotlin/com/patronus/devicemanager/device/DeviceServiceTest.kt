@@ -5,6 +5,7 @@ import com.patronus.devicemanager.device.data.DeviceRepository
 import com.patronus.devicemanager.device.data.getDeviceEntitySample
 import com.patronus.devicemanager.user.UserService
 import com.patronus.devicemanager.user.data.getUserEntitySample
+import com.patronus.devicemanager.web.exception.AlreadyExistsException
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -61,7 +62,7 @@ class DeviceServiceTest(
         val device = DeviceEntity(deviceId, "Serial 1", "Model 1", "12345")
         every { deviceRepository.findByIdOrNull(deviceId) } returns device
 
-        assertThrows<IllegalArgumentException> { deviceService.registerDevice(device) }
+        assertThrows<AlreadyExistsException> { deviceService.registerDevice(device) }
         verify { deviceRepository.findByIdOrNull(deviceId) }
         verify(exactly = 0) { deviceRepository.save(device) }
     }

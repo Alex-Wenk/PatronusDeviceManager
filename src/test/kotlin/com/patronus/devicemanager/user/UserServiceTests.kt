@@ -3,6 +3,7 @@ package com.patronus.devicemanager.user
 import com.patronus.devicemanager.user.data.UserEntity
 import com.patronus.devicemanager.user.data.UserRepository
 import com.patronus.devicemanager.user.data.getUserEntitySample
+import com.patronus.devicemanager.web.exception.NotFoundException
 import io.mockk.*
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -90,7 +91,7 @@ class UserServiceTests (
 
         every { userRepository.findByIdOrNull(userId) } returns null
 
-        assertThrows<IllegalArgumentException> { userService.getUser(userId) }
+        assertThrows<NotFoundException> { userService.getUser(userId) }
         verify { userRepository.findByIdOrNull(userId) }
     }
 }

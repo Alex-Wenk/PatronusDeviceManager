@@ -22,20 +22,20 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.HttpStatus
 import org.springframework.test.annotation.DirtiesContext
-import java.util.UUID
+import java.util.*
 
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = [PatronusDeviceManagerApplication::class])
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class DeviceControllerIntegrationTest (
-    @Autowired
-    val restTemplate: TestRestTemplate,
-    @Autowired
-    val userRepository: UserRepository,
-    @Autowired
-    val deviceRepository: DeviceRepository
+class DeviceControllerIntegrationTest(
+        @Autowired
+        val restTemplate: TestRestTemplate,
+        @Autowired
+        val userRepository: UserRepository,
+        @Autowired
+        val deviceRepository: DeviceRepository
 ) {
 
     @Test
@@ -51,7 +51,7 @@ class DeviceControllerIntegrationTest (
         jacksonObjectMapper.registerModule(JavaTimeModule())
         val getDeviceResponses = jacksonObjectMapper.readValue(result.body, object : TypeReference<List<GetDeviceResponse>>() {})
 
-        Assertions.assertEquals(2, getDeviceResponses.size)
+        assertEquals(2, getDeviceResponses.size)
         Assertions.assertTrue(getDeviceResponses.find { device ->
             device.id == deviceNoUser.id &&
                     device.model == deviceNoUser.model &&

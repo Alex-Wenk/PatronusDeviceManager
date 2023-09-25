@@ -1,7 +1,7 @@
 package com.patronus.devicemanager.device.converter
 
-import com.patronus.devicemanager.device.web.request.CreateDeviceRequest
 import com.patronus.devicemanager.device.data.DeviceEntity
+import com.patronus.devicemanager.device.web.request.CreateDeviceRequest
 import com.patronus.devicemanager.device.web.response.GetDeviceResponse
 import org.springframework.stereotype.Component
 

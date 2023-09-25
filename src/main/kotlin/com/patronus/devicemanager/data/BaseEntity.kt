@@ -1,8 +1,8 @@
 package com.patronus.devicemanager.data
 
-import java.util.UUID
+import java.util.*
 
-open class BaseEntity (open val id: UUID? = null) {
+open class BaseEntity(open val id: UUID? = null) {
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

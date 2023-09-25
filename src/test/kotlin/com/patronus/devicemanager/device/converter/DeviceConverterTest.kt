@@ -12,10 +12,10 @@ import org.junit.jupiter.api.extension.ExtendWith
 import java.util.*
 
 @ExtendWith(MockKExtension::class)
-class DeviceConverterTest (
+class DeviceConverterTest(
         @InjectMockKs
         private val deviceConverter: DeviceConverter
-){
+) {
 
     @Test
     fun `test createDeviceRequestToEntity`() {

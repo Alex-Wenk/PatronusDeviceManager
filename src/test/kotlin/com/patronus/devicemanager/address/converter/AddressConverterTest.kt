@@ -12,10 +12,10 @@ import org.junit.jupiter.api.extension.ExtendWith
 import java.util.*
 
 @ExtendWith(MockKExtension::class)
-class AddressConverterTest (
+class AddressConverterTest(
         @InjectMockKs
         private val addressConverter: AddressConverter
-){
+) {
 
     @Test
     fun `fromEntityToDTO should convert AddressEntity to AddressDTO`() {

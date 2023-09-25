@@ -28,12 +28,12 @@ import java.time.LocalDate
         classes = [PatronusDeviceManagerApplication::class])
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class UserControllerIntegrationTest (
+class UserControllerIntegrationTest(
         @Autowired
         val restTemplate: TestRestTemplate,
         @Autowired
         val userRepository: UserRepository
-){
+) {
 
     @Test
     fun `when CreateUser Called Then User is Created`() {
@@ -115,9 +115,9 @@ class UserControllerIntegrationTest (
         assertEquals(1, getUserResponses.size)
         val user = getUserResponses[0]
         assertTrue(
-            user.id == secondUser.id &&
-                    user.devices.size == 1 &&
-                    user.devices[0].id == device.id)
+                user.id == secondUser.id &&
+                        user.devices.size == 1 &&
+                        user.devices[0].id == device.id)
 
     }
 

@@ -19,12 +19,12 @@ import org.springframework.data.repository.findByIdOrNull
 import java.util.*
 
 @ExtendWith(MockKExtension::class)
-class UserServiceTests (
+class UserServiceTests(
         @MockK
         private val userRepository: UserRepository,
         @InjectMockKs
-        private  val userService: UserService
-){
+        private val userService: UserService
+) {
 
     @Test
     fun `getUsers should not filter on hasDevice if hasDevice is not set`() {

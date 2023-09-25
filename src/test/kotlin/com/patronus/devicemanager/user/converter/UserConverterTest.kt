@@ -1,19 +1,13 @@
 package com.patronus.devicemanager.user.converter
 
 import com.patronus.devicemanager.address.converter.AddressConverter
-import com.patronus.devicemanager.address.data.AddressEntity
-import com.patronus.devicemanager.address.data.getAddressEntitySample
-import com.patronus.devicemanager.address.web.AddressDTO
 import com.patronus.devicemanager.address.web.getAddressDtoTestSample
 import com.patronus.devicemanager.device.converter.DeviceConverter
-import com.patronus.devicemanager.device.data.DeviceEntity
 import com.patronus.devicemanager.device.data.getDeviceEntitySample
-import com.patronus.devicemanager.user.data.UserEntity
 import com.patronus.devicemanager.user.data.getUserEntitySample
 import com.patronus.devicemanager.user.web.request.CreateUserRequest
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
-import io.mockk.impl.annotations.MockK
 import io.mockk.impl.annotations.SpyK
 import io.mockk.junit5.MockKExtension
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -24,14 +18,14 @@ import java.time.LocalDate
 import java.util.*
 
 @ExtendWith(MockKExtension::class)
-class UserConverterTest (
+class UserConverterTest(
         @SpyK
         var addressConverter: AddressConverter,
         @SpyK
         var deviceConverter: DeviceConverter,
         @InjectMockKs
         var userConverter: UserConverter
-){
+) {
     @Test
     fun `createUserRequestToEntity should convert CreateUserRequest to UserEntity`() {
         val createUserRequest = CreateUserRequest(
@@ -53,7 +47,7 @@ class UserConverterTest (
     @Test
     fun `userEntityToGetUserResponse should convert UserEntity to GetUserResponse`() {
         val addressDTO = getAddressDtoTestSample()
-        every { addressConverter.fromEntityToDTO(any()) } .returns(addressDTO)
+        every { addressConverter.fromEntityToDTO(any()) }.returns(addressDTO)
 
         val userEntity = getUserEntitySample()
         val deviceEntity = getDeviceEntitySample(userEntity)

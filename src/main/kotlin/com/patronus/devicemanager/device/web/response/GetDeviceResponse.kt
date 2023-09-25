@@ -1,4 +1,4 @@
-package com.patronus.devicemanager.device
+package com.patronus.devicemanager.device.web.response
 
 import java.util.*
 

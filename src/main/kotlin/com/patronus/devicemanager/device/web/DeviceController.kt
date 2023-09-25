@@ -1,5 +1,7 @@
-package com.patronus.devicemanager.device
+package com.patronus.devicemanager.device.web
 
+import com.patronus.devicemanager.device.web.request.CreateDeviceRequest
+import com.patronus.devicemanager.device.web.response.GetDeviceResponse
 import org.springframework.web.bind.annotation.*
 
 @RestController

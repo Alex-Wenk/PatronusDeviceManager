@@ -1,4 +1,4 @@
-package com.patronus.devicemanager.address
+package com.patronus.devicemanager.address.web
 
 data class AddressDTO(
         val addressLine1: String,

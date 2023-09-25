@@ -1,6 +1,6 @@
-package com.patronus.patronusdevicemanager.user
+package com.patronus.devicemanager.user
 
-import com.patronus.patronusdevicemanager.address.AddressDTO
+import com.patronus.devicemanager.address.AddressDTO
 import java.time.LocalDate
 
 data class CreateUserRequest(

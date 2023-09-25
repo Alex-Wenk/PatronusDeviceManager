@@ -1,7 +1,7 @@
-package com.patronus.patronusdevicemanager.user
+package com.patronus.devicemanager.user
 
-import com.patronus.patronusdevicemanager.address.AddressDTO
-import com.patronus.patronusdevicemanager.device.GetDeviceResponse
+import com.patronus.devicemanager.address.AddressDTO
+import com.patronus.devicemanager.device.GetDeviceResponse
 import java.time.LocalDate
 import java.util.*
 

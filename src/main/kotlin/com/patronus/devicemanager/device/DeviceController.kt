@@ -1,4 +1,4 @@
-package com.patronus.patronusdevicemanager.device
+package com.patronus.devicemanager.device
 
 import org.springframework.web.bind.annotation.*
 

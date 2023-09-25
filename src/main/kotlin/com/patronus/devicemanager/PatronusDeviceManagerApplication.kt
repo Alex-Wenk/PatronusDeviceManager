@@ -1,4 +1,4 @@
-package com.patronus.patronusdevicemanager
+package com.patronus.devicemanager
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

@@ -1,4 +1,4 @@
-package com.patronus.patronusdevicemanager
+package com.patronus.devicemanager
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

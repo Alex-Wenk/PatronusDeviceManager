@@ -1,4 +1,4 @@
-package com.patronus.patronusdevicemanager.user
+package com.patronus.devicemanager.user
 
 import org.springframework.web.bind.annotation.*
 import java.util.*

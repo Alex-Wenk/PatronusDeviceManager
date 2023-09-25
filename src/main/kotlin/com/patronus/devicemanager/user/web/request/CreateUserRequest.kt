@@ -1,4 +1,4 @@
-package com.patronus.devicemanager.user
+package com.patronus.devicemanager.user.web.request
 
 import com.patronus.devicemanager.address.web.AddressDTO
 import java.time.LocalDate

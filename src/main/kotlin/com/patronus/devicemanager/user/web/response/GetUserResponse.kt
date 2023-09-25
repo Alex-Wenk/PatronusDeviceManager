@@ -1,4 +1,4 @@
-package com.patronus.devicemanager.user
+package com.patronus.devicemanager.user.web.response
 
 import com.patronus.devicemanager.address.web.AddressDTO
 import com.patronus.devicemanager.device.web.response.GetDeviceResponse

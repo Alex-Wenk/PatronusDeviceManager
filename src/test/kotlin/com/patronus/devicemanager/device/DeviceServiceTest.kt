@@ -20,12 +20,12 @@ import java.util.*
 
 @ExtendWith(MockKExtension::class)
 class DeviceServiceTest(
-        @InjectMockKs
-        private val deviceService: DeviceService,
         @MockK
         private val deviceRepository: DeviceRepository,
         @MockK
         private val userService: UserService,
+        @InjectMockKs
+        private val deviceService: DeviceService,
 ) {
 
     @Test

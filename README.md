@@ -29,6 +29,8 @@ will be requirements to provide more functionality around get User - perhaps to 
 country, or search for users by name.
 * When registering a device the service consumer will provide the UUID identifier for the device - the service 
 is not responsible for creating the UUID.
+* Devices may be re-assigned from one user to another
+* A user may have multiple devices assigned to them
 
 ### Areas for future improvement
  * Currently, no validation is done on provided inputs we may want to add validations in the future
@@ -38,3 +40,4 @@ is not responsible for creating the UUID.
    * Device model
  * Device UUID is used as the internal ID for the Device entities - perhaps separate out to have our own internal identifier
  * A user interface
+ * For a device to be unassigned from a user before it is re-assigned to a second user - do not allow user -> user reassignment. 
